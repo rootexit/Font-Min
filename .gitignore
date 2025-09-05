@@ -7,4 +7,6 @@
 .idea
 
 *.otf
+src/**/*.otf
 *.ttf
+src/**/*.ttf
