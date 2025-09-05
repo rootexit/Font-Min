@@ -5,3 +5,6 @@
 .webstorm
 
 .idea
+
+*.otf
+*.ttf

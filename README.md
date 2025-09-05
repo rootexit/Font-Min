@@ -1,3 +1,5 @@
+## 仓库来源 https://github.com/iizyd/SourceHanSansCN-TTF-Min
+
 ## 字体精简仓库介绍
 - 本仓库中精简的字体如下：
   - 思源宋体 otf
