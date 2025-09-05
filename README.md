@@ -1,5 +1,16 @@
 ## 仓库来源 https://github.com/iizyd/SourceHanSansCN-TTF-Min
 
+
+```bash
+mac
+brew install fonttools
+brew install woff2
+# OTF → WOFF2
+woff2_compress AlibabaPuHuiTi-3-55-Regular.otf
+# OTF → WOFF
+woff2_decompress AlibabaPuHuiTi-3-55-Regular.woff2
+```
+
 ## 字体精简仓库介绍
 - 本仓库中精简的字体如下：
   - 思源宋体 otf

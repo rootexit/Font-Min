@@ -25,8 +25,18 @@ for dir in "$SRC_ROOT"/*/; do
 
         # 获取字体文件名
         base_name=$(basename "$font_file")
+        ext="${base_name##*.}"
+        base_name_only="${base_name%.*}"
 
         echo "正在压缩字体: $base_name ($font_type)"
+        if [ "$ext" == "otf" ]; then
+            echo "   • OTF → WOFF"; \
+			pyftsubset "$font_file" --text-file="$(CONTENT_FILE)" \
+				--flavor=woff  --output-file="$dist_dir/$base_name_only.woff"; \
+			echo "   • OTF → WOFF2"; \
+			pyftsubset "$font_file" --text-file="$(CONTENT_FILE)" \
+				--flavor=woff2 --output-file="$dist_dir/$base_name_only.woff2";
+        fi
         pyftsubset "$font_file" --text-file="$CONTENT_FILE" --output-file="$dist_dir/$base_name"
     done
 done
